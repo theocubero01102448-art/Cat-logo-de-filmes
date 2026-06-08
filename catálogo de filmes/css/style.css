@@ -1,17 +1,22 @@
-body{
-    background-color: aliceblue;
+body {
+    background: #f4f4f4;
 }
 
-.cord-Filme{
-    transition: 0,3s;
+.card-filme {
+    transition: 0.3s;
     cursor: pointer;
 }
 
-.cord-Filme:houver{
+.card-filme:hover {
     transform: scale(1.03);
 }
 
-.card-Filme img{
+.card-filme img {
     height: 400px;
     object-fit: cover;
-} 
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
