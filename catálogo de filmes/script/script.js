@@ -1,49 +1,11 @@
-const filmes = [
-    { titulo: "Vingadores", imagem: "https://media.themoviedb.org/t/p/w300_and_h450_face/A4kvp7vY1BDLrrQIagRCffLKj1t.jpg", descricao: "A trama se espalha pelo espaço e pela Terra, colocando os heróis (incluindo os Vingadores, Guardiões da Galáxia, Doutor Estranho e o exército de Wakanda) em batalhas simultâneas para proteger as joias. Apesar de seus esforços heroicos e sacrifícios pessoais, Thanos consegue reunir todas as joias na Manopla do Infinito e atinge seu objetivo com um estalar de dedos, trazendo consequências devastadoras" , breve: "Guerra Infinita" },
-    { titulo: "Backrooms", imagem: "https://media.themoviedb.org/t/p/w300_and_h450_face/a1pgQeEge47xrS4jGlDwIHiieVK.jpg", descricao: "uma adaptação de terror psicológico e ficção científica baseada na famosa lenda urbana da internet creepypasta sobre uma dimensão labiríntica e desolada." ,breve: "Um Não-lugar" },
-    { titulo: "Minecraft", imagem: "https://media.themoviedb.org/t/p/w300_and_h450_face/a227F8PnXDABR1JJTuasmJmxEhf.jpg", descricao: "A história acompanha quatro desajustados (interpretados por Jason Momoa, Sebastian Eugene Hansen, Emma Myers e Danielle Brooks) que são transportados para o Overworld (Mundo Superior). Nesse bizarro país das maravilhas cúbico, eles precisam aprender a sobreviver, usar a imaginação e embarcar em uma jornada mágica com o construtor Steve (Jack Black) para conseguir voltar para casa." , breve: "Um filme" },
-    { titulo: "Motoqueira Fantasma", imagem: "https://media.themoviedb.org/t/p/w300_and_h450_face/vVGVlwRrvVgLPE98rwo8jo3QC2b.jpg", descricao: "é um famoso super-herói/anti-herói sobrenatural da Marvel Comics que ganhou adaptações marcantes no cinema, sendo a mais conhecida a franquia estrelada por Nicolas Cage" , breve: "Ghost rider" },
-    { titulo: "Todo mundo em Panico", imagem: "https://media.themoviedb.org/t/p/w300_and_h450_face/1z9haN6yiYsuv9D93H8n5yaCk8I.jpg", descricao: "A premissa central de quase todos os filmes envolve uma heroína e seus amigos se deparando com situações clássicas de grandes sucessos do cinema (como Pânico, Eu Sei o que Vocês Fizeram no Verão Passado e O Chamado), mas quebrando todas as regras do medo com piadas ácidas, referências à cultura pop e muito non-sense.", breve: "Scary movie" },
-    { titulo: "Gente Grande", imagem: "https://media.themoviedb.org/t/p/w300_and_h450_face/ppU2xJnlKdW3F01AtC9wMuXRZCg.jpg", descricao: "é uma famosa comédia americana estrelada por Adam Sandler, Kevin James, Chris Rock, David Spade e Rob Schneider" , breve: "Grown ups" },
-]
-
-const listarFilmes = document.getElementById("listarFilmes");
-
-function mostrarFilmes(lista) {
-    listarFilmes.innerHTML = ""
-    lista.forEach(filme => {
-        listarFilmes.innerHTML += `
-        <div class="col-md-4">
-          <div class="card card-filme h-100">
-            <img src="${filme.imagem}" class="card-img-top">
-            <div class="card-body">
-              <h3>${filme.titulo}</h3>
-              <p>${filme.breve}</p>
-              <button class="btn btn-dark" onclick="verDetalhes('${filme.titulo}', '${filme.descricao}')">Ver detalhes</button>
-            </div>
-          </div>
-        </div>
-        `
-    })
-}
-
-mostrarFilmes(filmes)
-
-function verDetalhes(titulo, descricao) {
-    Swal.fire({
-        title: titulo,
-        text: descricao,
-        icon: "info"
-    })
-}
-
 const serie = [
-    { titulo: "Stranger Things", imagem: "https://www.themoviedb.org/tv/66732-stranger-things", descricao: "serie fictícia sobre alienígenas e mosntros de um mundo invertido"},
-    { titulo: "One Punch Man", imagem: "https://www.themoviedb.org/tv/63926", descricao: "O super-herói mais forte do mundo pode matar qualquer um com um só golpe. Mas, com uma vida sem desafios, ele sofre com o tédio e a depressão." },
-      { titulo: "The Seven Dead Sins", imagem: "https://media.themoviedb.org/t/p/w300_and_h450_face/a227F8PnXDABR1JJTuasmJmxEhf.jpg", descricao: "Uma poderosa aliança mágica que pode significar o fim de tudo ameaça a nova era de paz. É hora de Meliodas e seus amigos entrarem em ação. },
-    { titulo: "Motoqueira Fantasma", imagem: "https://media.themoviedb.org/t/p/w300_and_h450_face/vVGVlwRrvVgLPE98rwo8jo3QC2b.jpg", descricao: "é um famoso super-herói/anti-herói sobrenatural da Marvel Comics que ganhou adaptações marcantes no cinema, sendo a mais conhecida a franquia estrelada por Nicolas Cage" , breve: "Ghost rider" },
-    { titulo: "Todo mundo em Panico", imagem: "https://media.themoviedb.org/t/p/w300_and_h450_face/1z9haN6yiYsuv9D93H8n5yaCk8I.jpg", descricao: "A premissa central de quase todos os filmes envolve uma heroína e seus amigos se deparando com situações clássicas de grandes sucessos do cinema (como Pânico, Eu Sei o que Vocês Fizeram no Verão Passado e O Chamado), mas quebrando todas as regras do medo com piadas ácidas, referências à cultura pop e muito non-sense.", breve: "Scary movie" },
-    { titulo: "Naruto", imagem: "https://media.themoviedb.org/t/p/w300_and_h450_face/9ptbVZpKNy5NY9D4zq4KGiYWRQY.jpg", descricao: "Momentos antes do nascimento de Naruto Uzumaki, um enorme demônio conhecido como o Kyuubi, a Raposa de Nove Caudas, atacou o vilarejo da folha oculta Konoha, causando destruição. Para pôr fim à devastação de Kyuubi, o líder da aldeia, o quarto Hokage, sacrificou sua vida e selou o monstruoso animal dentro do recém-nascido Naruto. Agora, Naruto é um ninja hiperativo e cabeça dura que ainda vivem em Konoha. Evitado pelos demais habitantes por causa da Kyuubi dentro dele, Naruto se esforça para encontrar seu lugar na aldeia, enquanto o seu ardente desejo de se tornar o Hokage de Konoha o leva a conhecer alguns grandes novos amigos, e também alguns inimigos mortais." }, 
+    { titulo: "invencivel", imagem: "https://media.themoviedb.org/t/p/w300_and_h450_face/qhb7RWU9ad9a5m3HbeRRXzjaMXf.jpg", descricao: "E uma serie animada que retrata a vida de um super heroi" , breve: "invencivel" },
+    { titulo: "you", imagem: "https://media.themoviedb.org/t/p/w300_and_h450_face/ivqi64qY0S3ZAimvjlqXLEH7D6W.jpg", descricao: "Um homem obsessivo e perigosamente charmoso vai ao extremo para entrar na vida das mulheres que o fascinam." ,breve: "voce" },
+    { titulo: "the boys", imagem: "https://media.themoviedb.org/t/p/w300_and_h450_face/in1R2dDc421JxsoRWaIIAqVI2KE.jpg", descricao: "Na trama, conhecemos um mundo em que super-heróis são as maiores celebridades do planeta, e rotineiramente abusam dos seus poderes ao invés de os usarem para o bem.", breve: "um super" },
+    { titulo: "rick e morty", imagem: "https://media.themoviedb.org/t/p/w300_and_h450_face/5qfd0e2uMbVInX3YdeFbDsfxi1t.jpg", descricao: "O brilhante cientista beberrão Rick sequestra Morty, seu neto aborrescente, para viver loucuras em outros mundos e dimensões alternativas." , breve: "aventuras" },
+    { titulo: "bones", imagem: "https://media.themoviedb.org/t/p/w300_and_h450_face/rElaRnNez2dXBCMv1THHdVcroFY.jpg", descricao: "A Dra. Temperance Brennan é uma antropóloga forense altamente qualificada que trabalha no Instituto Jeffersonian e escreve romances. Ela possui um talento impressionante para enxergar pistas em ossos de vítimas, e por isso a polícia a chama para ajudar em investigações quando os restos mortais estão tão decompostos, queimados ou destruídos que métodos de identificação padrão são inúteis. Temperance frequentemente trabalha em parceria com o agente especial Seeley Booth, ex-atirador de elite do exército que não confia na ciência ou em cientistas para resolver crimes, mas desenvolveu um respeito pessoal e profissional por Temperance.", breve: "romance" },
+    { titulo: "uma familia da pesada", imagem: "https://media.themoviedb.org/t/p/w300_and_h450_face/j28XGzAhvJNGWEHbYrzvREw7kKd.jpg", descricao: "A série animada apresenta as aventuras da família Griffin. O ignorante Peter e sua esposa Lois residem em Quahog, em Rhode Island e têm três filhos. Meg, a filha mais velha, é uma pária social, e o adolescente Chris é estranho e sem noção quando se trata do sexo oposto. O mais novo, Stewie, é um bebê gênio decidido a matar sua mãe e destruir o mundo. O cachorro falante, Brian, mantém Stewie sob controle enquanto toma martinis e resolve seus próprios problemas de vida." , breve: "familia da pesada" },
+]
 
 const listarSeries = document.getElementById("listarSeries");
 
@@ -56,7 +18,7 @@ function mostrarSerie(lista) {
             <img src="${serie.imagem}" class="card-img-top">
             <div class="card-body">
               <h3>${serie.titulo}</h3>
-              <p>${serie.breve}</p
+              <p>${serie.breve}</p>
               <button class="btn btn-dark" onclick="verDetalhes('${serie.titulo}', '${serie .descricao}')">Ver detalhes</button>
             </div>
           </div>
