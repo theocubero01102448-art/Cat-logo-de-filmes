@@ -15,9 +15,9 @@ const filmes =[
         descrição: "americano",
     },
      {
-        titulo: "luacas neto em: acapamento de ferias 2",
-        Imagem: "https://media.themoviedb.org/t/p/w300_and_h450_face/vYgZa09ICwAB2TkonMfXRT4Dj8E.jpg",
-        descrição: "acapamento",
+        titulo: "O justiceiro",
+        Imagem: "https://www.themoviedb.org/movie/1439930-the-punisher-one-last-kill?language=pt-BR#",
+        descrição: "Enquanto Frank Castle busca um significado além da vingança, uma força inesperada o arrasta de volta para a luta.",
     },
      {
         titulo: "miudos e graudos",
